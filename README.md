@@ -1,15 +1,20 @@
 # hw02-tester
 
-Additional for CS577 Spring 2021 HW02: Asymptotic Analysis & Graphs
+Additional tests for CS577 Spring 2021 HW02: Asymptotic Analysis & Graphs
 
 ## Changes
+
+### V1.1
+ - Add sample input on Canvas as test0
+ - Show difference between expected and user output
+ - Run `make build` before running tests
 
 ### V1.0
  - Initial commit
 
 ## Usage
 
-Download [tests.json](tests.json) and [hw02-test.py](hw02-test.py) into the directory that contains your `Makefile` and code. Your need to be able to run your code using `$ make run` in that directory.
+Download [tests.json](tests.json) and [hw02-test.py](hw02-test.py) into the directory that contains your `Makefile` and code. Your need to be able to run your code using `$ make build && make run` in that directory.
 
 The contents of your directory should look like this:
 
