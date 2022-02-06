@@ -32,6 +32,7 @@ $ python3 hw02-test.py
 ## Additional Information
 
  - If you want to see how the tests were generated, or generate your own, see [generate_tests.py](generate_tests.py)
+ - These are not the actual tests Gradescope uses. I just generated random graph inputs, and made sure the outputs matched for a Java version and a Python version that each passed all Gradescope tests.
 
 ## Disclaimer
 
