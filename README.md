@@ -39,4 +39,4 @@ These tests are not endorsed or created by anyone working in an official capacit
 
 By running any of the code in this repository, you are executing code you downloaded from the internet. Back up your files and take a look at what you are running first.
 
-If you have comments or questions, create an issue at [https://github.com/CS577-testers-SP22/hw02-tester/issues](https://github.com/CS577-testers-SP22/hw02-tester/issues) or ask in the discord at [https://discord.gg/CTFKYaUePf).
+If you have comments or questions, create an issue at [https://github.com/CS577-testers-SP22/hw02-tester/issues](https://github.com/CS577-testers-SP22/hw02-tester/issues) or ask in the discord at [https://discord.gg/CTFKYaUePf](https://discord.gg/CTFKYaUePf).
