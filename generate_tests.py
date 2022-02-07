@@ -54,6 +54,11 @@ getJava = lambda testCase: shell('java DFS', stdin=testCase)
 
 tests = dict()
 
+# manual tests
+tests['test-canvas'] = {'input':"2\n3\nA B\nB A\nC\n9\n1 2 9\n2 3 5 6\n3 2 7\n4 6\n5 2\n6 2 4\n7 3\n8 9\n9 1 8\n", 'output':"A B C\n1 2 3 7 5 6 4 9 8\n"}
+tests['test-sorted'] = {'input':"1\n3\nA B AA\nB A\nAA A\n", 'output':'A B AA\n'}
+
+# random tests
 for i in tqdm(range(MAX_TESTS)):
     test = generateInput()
     # print(test)
@@ -70,7 +75,7 @@ for i in tqdm(range(MAX_TESTS)):
         print()
         print(f'Input\n{test}')
         exit()
-    tests[f'test{i+1}'] = {'input':test, 'output':python}
+    tests[f'test{i}'] = {'input':test, 'output':python}
         # print(test)
 
 pprint(tests)
