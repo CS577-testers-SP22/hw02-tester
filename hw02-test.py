@@ -11,8 +11,7 @@ with open(TEST_FILE, 'r') as f:
 def shell(cmd, stdin=None):
     p = Popen(cmd, shell=True, stdout=PIPE, stderr=PIPE, stdin=PIPE)
     out, err = p.communicate(input=stdin.encode() if stdin else None)
-    return out.decode('utf8').strip(), err.decode('utf8').strip()
-
+    return out.decode('utf8'), err.decode('utf8')
 print('Building:')
 buildOutput, buildError = shell('make build')
 print(buildOutput)

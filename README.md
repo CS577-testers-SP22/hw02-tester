@@ -4,6 +4,9 @@ Additional tests for CS577 Spring 2021 HW02: Asymptotic Analysis & Graphs
 
 ## Changes
 
+### V1.2
+ - Check for whitespace since Gradescope cares about that
+
 ### V1.1
  - Add sample input on Canvas as test0
  - Show difference between expected and user output

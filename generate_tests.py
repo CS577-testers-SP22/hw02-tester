@@ -43,11 +43,11 @@ def generateInput():
         for n, edges in nodes.items():
             test += f'\n{n} {" ".join(edges)}'.strip(' ')
 
-    return test
+    return test + '\n'
 
 def shell(cmd, stdin=None):
     out, err = Popen(cmd, shell=True, stdout=PIPE, stderr=PIPE, stdin=PIPE).communicate(input=stdin.encode())
-    return out.decode('utf8').strip(), err.decode('utf8').strip()
+    return out.decode('utf8'), err.decode('utf8')
 
 getPython = lambda testCase: shell('python3 DFS.py', stdin=testCase)
 getJava = lambda testCase: shell('java DFS', stdin=testCase)
@@ -70,7 +70,7 @@ for i in tqdm(range(MAX_TESTS)):
         print()
         print(f'Input\n{test}')
         exit()
-    tests[f'test{i}'] = {'input':test, 'output':python}
+    tests[f'test{i+1}'] = {'input':test, 'output':python}
         # print(test)
 
 pprint(tests)
