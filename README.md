@@ -4,6 +4,9 @@ Additional tests for CS577 Spring 2021 HW02: Asymptotic Analysis & Graphs
 
 ## Changes
 
+### V1.4
+ - Add second sample input from Canvas
+
 ### V1.3
  - Add explicit test for following input order instead of sorting again
 
