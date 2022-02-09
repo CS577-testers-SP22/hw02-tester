@@ -17,10 +17,11 @@ buildOutput, buildError = shell('make build')
 print(buildOutput)
 print(buildError)
 
-for _, testCase in tqdm(tests.items()):
+for testName, testCase in tqdm(tests.items()):
     userOutput, userError = shell('make run', stdin=testCase['input'])
     userOutput = '\n'.join(userOutput.split('\n')[1:]) # first line is Makefile's run command
     if userOutput != testCase['output']:
+        print(f"Failed test: {testName}")
         print(f"Input:\n{testCase['input']}\n")
         print(f"Expected output:\n{testCase['output']}\n")
         print(f"Program output:\n{userOutput}\n")
@@ -35,4 +36,4 @@ for _, testCase in tqdm(tests.items()):
         print()   
         exit()
 
-# print(tests)
+print('All tests passed.')

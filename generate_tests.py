@@ -55,8 +55,9 @@ getJava = lambda testCase: shell('java DFS', stdin=testCase)
 tests = dict()
 
 # manual tests
-tests['test-canvas'] = {'input':"2\n3\nA B\nB A\nC\n9\n1 2 9\n2 3 5 6\n3 2 7\n4 6\n5 2\n6 2 4\n7 3\n8 9\n9 1 8\n", 'output':"A B C\n1 2 3 7 5 6 4 9 8\n"}
-tests['test-sorted'] = {'input':"1\n3\nA B AA\nB A\nAA A\n", 'output':'A B AA\n'}
+tests['canvas-test-0'] = {'input':"2\n3\nA B\nB A\nC\n9\n1 2 9\n2 3 5 6\n3 2 7\n4 6\n5 2\n6 2 4\n7 3\n8 9\n9 1 8\n", 'output':"A B C\n1 2 3 7 5 6 4 9 8\n"}
+tests['canvas-test-1'] = {'input':"3\n3\nA B\nB A\nC\n9\n1 2 9\n2 3 5 6\n3 2 7\n4 6\n5 2\n6 2 4\n7 3\n8 9\n9 1 8\n31\nA B C\nB A D E\nC A F G\nD B H I\nE B J K\nF C L M\nG C N O\nH D P Q\nI D R S\nJ E T U\nK E V W\nL F X Y\nM F Z AA\nN G AB AC\nO G AD AE\nP H\nQ H\nR I\nS I\nT J\nU J\nV K\nW K\nX L\nY L\nZ M\nAA M\nAB N\nAC N\nAD O\nAE O\n", 'output':"A B C\n1 2 3 7 5 6 4 9 8\nA B D H P Q I R S E J T U K V W C F L X Y M Z AA G N AB AC O AD AE\n"}
+tests['sorted-test-0'] = {'input':"1\n3\nA B AA\nB A\nAA A\n", 'output':'A B AA\n'}
 
 # random tests
 for i in tqdm(range(MAX_TESTS)):
@@ -75,7 +76,7 @@ for i in tqdm(range(MAX_TESTS)):
         print()
         print(f'Input\n{test}')
         exit()
-    tests[f'test{i}'] = {'input':test, 'output':python}
+    tests[f'random-test-{i}'] = {'input':test, 'output':python}
         # print(test)
 
 pprint(tests)
