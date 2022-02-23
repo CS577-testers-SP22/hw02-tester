@@ -1,6 +1,6 @@
 # hw02-tester
 
-Additional tests for CS577 Spring 2021 HW02: Asymptotic Analysis & Graphs
+Additional tests for CS577 Spring 2022 HW02: Asymptotic Analysis & Graphs
 
 ## Changes
 

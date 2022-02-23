@@ -23,16 +23,16 @@ for testName, testCase in tqdm(tests.items()):
     if userOutput != testCase['output']:
         print(f"Failed test: {testName}")
         print(f"Input:\n{testCase['input']}\n")
-        print(f"Expected output:\n{testCase['output']}\n")
-        print(f"Program output:\n{userOutput}\n")
+        print(f"Expected output:\n{'*'*32}\n{testCase['output']}\n{'*'*32}\n")
+        print(f"Program output:\n{'*'*32}\n{userOutput}\n{'*'*32}\n")
         print(f"Program error:\n{userError}")
         print('Difference between user and expected outputs:')
         for i,s in enumerate(difflib.ndiff(userOutput, testCase['output'])):
             if s[0]==' ': continue
             elif s[0]=='-':
-                print(u'Delete "{}" from position {}'.format(s[-1],i))
+                print(u'Extra "{}" at position {}'.format(s[-1],i))
             elif s[0]=='+':
-                print(u'Add "{}" to position {}'.format(s[-1],i))    
+                print(u'Missing "{}" at position {}'.format(s[-1],i))    
         print()   
         exit()
 
